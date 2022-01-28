@@ -1,0 +1,905 @@
+[
+    {
+        "id": "64ce585edc3c7764",
+        "type": "tab",
+        "label": "Hubitat Everything",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7caeec68a7bd0ef0",
+        "type": "tab",
+        "label": "demo flo",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b4220f465b8c9d38",
+        "type": "tab",
+        "label": "earthquake demo",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ebc53e134ca0d45f",
+        "type": "tab",
+        "label": "Flow 5",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9e2fbff06973544b",
+        "type": "websocket-client",
+        "path": "ws://192.168.0.64/eventsocket",
+        "tls": "",
+        "wholemsg": "true",
+        "hb": "0"
+    },
+    {
+        "id": "659f19e95bd3636c",
+        "type": "websocket-client",
+        "path": "ws://192.168.0.64/logsocket",
+        "tls": "",
+        "wholemsg": "true",
+        "hb": "0"
+    },
+    {
+        "id": "2d024426faa8ae6d",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "hubitat",
+        "name": "influxdb",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://192.168.0.72:8086",
+        "rejectUnauthorized": false
+    },
+    {
+        "id": "6ca8bde.9eb2f44",
+        "type": "influxdb",
+        "hostname": "localhost",
+        "port": "8086",
+        "protocol": "https",
+        "database": "new_db",
+        "name": "",
+        "usetls": true,
+        "tls": "f7f39f4e.896ae",
+        "influxdbVersion": "1.x"
+    },
+    {
+        "id": "f7f39f4e.896ae",
+        "type": "tls-config",
+        "name": "local-tls",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "verifyservercert": false
+    },
+    {
+        "id": "c7dab6b4a8aaaaa7",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "fa-poop",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c5e77b5dbe6ce581",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "e5a3f2e377451fbc",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "c7dab6b4a8aaaaa7",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f949d5d996387744",
+        "type": "ui_tab",
+        "name": "Tab 2",
+        "icon": "dashboard",
+        "order": 2
+    },
+    {
+        "id": "c01b87795bd6e0b5",
+        "type": "websocket in",
+        "z": "64ce585edc3c7764",
+        "name": "event socket",
+        "server": "",
+        "client": "9e2fbff06973544b",
+        "x": 145,
+        "y": 105,
+        "wires": [
+            [
+                "c4c228cb401075f8",
+                "19e04b59915bb98a"
+            ]
+        ]
+    },
+    {
+        "id": "fe1de16d735a5f5e",
+        "type": "websocket in",
+        "z": "64ce585edc3c7764",
+        "name": "log socket",
+        "server": "",
+        "client": "659f19e95bd3636c",
+        "x": 135,
+        "y": 300,
+        "wires": [
+            [
+                "2eeb3b2c141a1fee",
+                "c777b2d4f0e91f7b"
+            ]
+        ]
+    },
+    {
+        "id": "839c48a292b2fc40",
+        "type": "influxdb out",
+        "z": "64ce585edc3c7764",
+        "influxdb": "2d024426faa8ae6d",
+        "name": "idb-fox-hub ",
+        "measurement": "events",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "foxtown",
+        "bucket": "hubitat",
+        "x": 685,
+        "y": 555,
+        "wires": []
+    },
+    {
+        "id": "64a55a859df96976",
+        "type": "http in",
+        "z": "64ce585edc3c7764",
+        "name": "",
+        "url": "hubitat",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 145,
+        "y": 555,
+        "wires": [
+            [
+                "6dcb2ea68c90159e",
+                "c99343a439d3d22e",
+                "1fdce488f02295a7"
+            ]
+        ]
+    },
+    {
+        "id": "6dcb2ea68c90159e",
+        "type": "debug",
+        "z": "64ce585edc3c7764",
+        "name": "Webhook Debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 630,
+        "wires": []
+    },
+    {
+        "id": "c99343a439d3d22e",
+        "type": "function",
+        "z": "64ce585edc3c7764",
+        "name": "Transform for influxDB",
+        "func": "\nfunction getMessageValue(){ \n    var messageValue = msg.payload.content.value;\n    if (messageValue === \"active\"){return 1;}\n    if (messageValue === \"inactive\"){return 0;}\n    if (Array.isArray(messageValue)){return messageValue.join(',');}\n\n    return messageValue;\n}\n\nvar payloadContent = [\n    // fields\n    {\n        value: Number(getMessageValue()) ?? 0,\n       // descriptionText: msg.payload.content.descriptionText,\n        data: msg.payload.content.data ?? \"\",\n    },\n    //tags\n    {\n        name: msg.payload.content.name,\n        displayName: msg.payload.content.displayName,\n        deviceId: Number(msg.payload.content.deviceId),\n        unit: msg.payload.content.unit,\n        type: msg.payload.content.type,\n    },\n]\n//console.log(msg.payload.content);\n\nmsg.payload = payloadContent;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 445,
+        "y": 555,
+        "wires": [
+            [
+                "d5709e9cc54b1d3e",
+                "839c48a292b2fc40"
+            ]
+        ]
+    },
+    {
+        "id": "d5709e9cc54b1d3e",
+        "type": "debug",
+        "z": "64ce585edc3c7764",
+        "name": " Debug Debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload[0].descriptionText",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 630,
+        "wires": []
+    },
+    {
+        "id": "1fdce488f02295a7",
+        "type": "ui_gauge",
+        "z": "64ce585edc3c7764",
+        "name": "gaugey",
+        "group": "e5a3f2e377451fbc",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "{{msg.payload.content.unit}}",
+        "format": "{{msg.payload.content.value}}",
+        "min": 0,
+        "max": "4000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "500",
+        "seg2": "2000",
+        "className": "",
+        "x": 495,
+        "y": 510,
+        "wires": []
+    },
+    {
+        "id": "c4c228cb401075f8",
+        "type": "debug",
+        "z": "64ce585edc3c7764",
+        "name": "EventSocket Debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 370,
+        "y": 165,
+        "wires": []
+    },
+    {
+        "id": "c777b2d4f0e91f7b",
+        "type": "debug",
+        "z": "64ce585edc3c7764",
+        "name": "LogSocket Debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "38b0255504b0214d",
+        "type": "inject",
+        "z": "64ce585edc3c7764",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "15",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 185,
+        "y": 840,
+        "wires": [
+            [
+                "3c8aedc393ef8e23"
+            ]
+        ]
+    },
+    {
+        "id": "066710f44d6223cc",
+        "type": "debug",
+        "z": "64ce585edc3c7764",
+        "name": "AllDevices Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 525,
+        "y": 915,
+        "wires": []
+    },
+    {
+        "id": "3c8aedc393ef8e23",
+        "type": "http request",
+        "z": "64ce585edc3c7764",
+        "name": "getAllDevices",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://192.168.0.64/apps/api/13/devices/all?access_token=402b6099-4f80-475e-a709-e56209467bfd",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": true,
+        "x": 380,
+        "y": 840,
+        "wires": [
+            [
+                "9aa0c7dc681120a2",
+                "066710f44d6223cc"
+            ]
+        ]
+    },
+    {
+        "id": "445f086888a31cb9",
+        "type": "debug",
+        "z": "64ce585edc3c7764",
+        "name": " Debug Debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 915,
+        "wires": []
+    },
+    {
+        "id": "9aa0c7dc681120a2",
+        "type": "function",
+        "z": "64ce585edc3c7764",
+        "name": "extract data for insert",
+        "func": "let devices = msg.payload || [];\n\n// VoltageMeasurement\nlet voltageDevices = devices.filter(function (device) {\n   return device.capabilities.includes(\"VoltageMeasurement\");\n});\nlet voltages = voltageDevices.map(function (device) {\n   return {\n      measurement: \"voltage\",\n      tags: {\n         id: Number(device.id ?? 0),\n         name: device.label ?? \"\"\n      },\n      fields: {\n         volts: Number(device.attributes.voltage ?? 0),\n      },\n      timestamp: `${new Date(device.date).getTime()/1000}`,\n   };\n})\n\n// TemperatureMeasurement\nlet temperatureDevices = devices.filter(function (device) {\n   return device.capabilities.includes(\"TemperatureMeasurement\");\n});\nlet temperatures =\n   temperatureDevices.map(function (device) {\n      return {\n         measurement: \"temperature\",\n         tags: {\n            id: Number(device.id ?? 0),\n            name: device.label ?? \"\"\n         },\n         fields: {\n            degreesF: Number(device.attributes.temperature ?? 0),\n         },\n         timestamp: `${new Date(device.date).getTime()/1000}`,\n      };\n   });\n\n// PowerMeters\nlet powerDevices = devices.filter(function (device) {\n   return device.capabilities.includes(\"PowerMeter\");\n});\nlet powers = powerDevices.map(function (device) {\n   return {\n      measurement: \"power\",\n      tags: {\n         id: Number(device.id ?? 0),\n         name: device.label ?? \"\"\n      },\n      fields: {\n         watts: Number(device.attributes.power ?? 0),\n      },\n      timestamp: `${new Date(device.date).getTime() / 1000}`,\n   };\n})\n\n// IlluminanceMeasurement\nlet luxDevices = devices.filter(function (device) {\n   return device.capabilities.includes(\"IlluminanceMeasurement\");\n});\nlet luxes = luxDevices.map(function (device) {\n   return {\n      measurement: \"illuminance\",\n      tags: {\n         id: Number(device.id ?? 0),\n         name: device.label ?? \"\"\n      },\n      fields: {\n         lux: Number(device.attributes.illuminance ?? -1),\n      },\n      timestamp: `${new Date(device.date).getTime() / 1000}`,\n   };\n})\n\n// RelativeHumidityMeasurement\nlet rhmDevices = devices.filter(function (device) {\n   return device.capabilities.includes(\"RelativeHumidityMeasurement\");\n});\nlet rhs = rhmDevices.map(function (device) {\n   return {\n      measurement: \"humidity\",\n      tags: {\n         id: Number(device.id ?? 0),\n         name: device.label ?? \"\"\n      },\n      fields: {\n         rh: Number(device.attributes.humidity ?? -1),\n      },\n      timestamp: `${new Date(device.date).getTime() / 1000}`,\n   };\n})\n\n\nmsg.payload = [].concat(temperatures, voltages, powers, luxes, rhs);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 840,
+        "wires": [
+            [
+                "445f086888a31cb9",
+                "571095824f5b9d57"
+            ]
+        ]
+    },
+    {
+        "id": "c021bd57c9d70094",
+        "type": "catch",
+        "z": "64ce585edc3c7764",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 600,
+        "y": 240,
+        "wires": [
+            [
+                "788707c84c08f521",
+                "a94ea3a82db8836e"
+            ]
+        ]
+    },
+    {
+        "id": "788707c84c08f521",
+        "type": "debug",
+        "z": "64ce585edc3c7764",
+        "name": "--BOOOM-- Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 795,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "ce41f66f217480ff",
+        "type": "comment",
+        "z": "64ce585edc3c7764",
+        "name": "Listen on `Logs` websocket for messages.     ",
+        "info": "",
+        "x": 235,
+        "y": 255,
+        "wires": []
+    },
+    {
+        "id": "7dab5691e124d1d4",
+        "type": "comment",
+        "z": "64ce585edc3c7764",
+        "name": "Listen on `Events` websocket for messages.",
+        "info": "",
+        "x": 245,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "245a7d4b7b82c963",
+        "type": "comment",
+        "z": "64ce585edc3c7764",
+        "name": "Listen to events webhook for messages.",
+        "info": "",
+        "x": 235,
+        "y": 495,
+        "wires": []
+    },
+    {
+        "id": "1765d7b28a2bb984",
+        "type": "comment",
+        "z": "64ce585edc3c7764",
+        "name": "Call getAllDevices for details on interval.",
+        "info": "",
+        "x": 260,
+        "y": 795,
+        "wires": []
+    },
+    {
+        "id": "571095824f5b9d57",
+        "type": "influxdb batch",
+        "z": "64ce585edc3c7764",
+        "influxdb": "2d024426faa8ae6d",
+        "precision": "",
+        "retentionPolicy": "",
+        "name": "duuump",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "foxtown",
+        "bucket": "hubitat",
+        "x": 810,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "db6a7eaaa8f426b9",
+        "type": "comment",
+        "z": "64ce585edc3c7764",
+        "name": "pokemon",
+        "info": "",
+        "x": 600,
+        "y": 195,
+        "wires": []
+    },
+    {
+        "id": "19e04b59915bb98a",
+        "type": "advanced logger",
+        "z": "64ce585edc3c7764",
+        "name": "Event Logger",
+        "filename": "/data/logData/events.log",
+        "maxsize": "100",
+        "maxfiles": 10,
+        "complete": "payload",
+        "console": false,
+        "file": true,
+        "debug": false,
+        "zip": false,
+        "logtype": "info",
+        "x": 340,
+        "y": 105,
+        "wires": []
+    },
+    {
+        "id": "2eeb3b2c141a1fee",
+        "type": "advanced logger",
+        "z": "64ce585edc3c7764",
+        "name": "Log Logger",
+        "filename": "/data/logData/logs.log",
+        "maxsize": "100",
+        "maxfiles": 10,
+        "complete": "payload",
+        "console": false,
+        "file": true,
+        "debug": false,
+        "zip": false,
+        "logtype": "info",
+        "x": 340,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a94ea3a82db8836e",
+        "type": "advanced logger",
+        "z": "64ce585edc3c7764",
+        "name": "Error Logger",
+        "filename": "/data/logData/error.log",
+        "maxsize": "100",
+        "maxfiles": 10,
+        "complete": "payload",
+        "console": false,
+        "file": true,
+        "debug": true,
+        "zip": false,
+        "logtype": "error",
+        "x": 775,
+        "y": 195,
+        "wires": []
+    },
+    {
+        "id": "e0116cdf1c6d2229",
+        "type": "inject",
+        "z": "7caeec68a7bd0ef0",
+        "name": "timestamper",
+        "props": [
+            {
+                "p": "timestamp",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "3.75",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0",
+        "topic": "",
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "65740427f05fa3be",
+                "2bfb7ecfdb7d1845"
+            ]
+        ]
+    },
+    {
+        "id": "423224e73431d344",
+        "type": "debug",
+        "z": "7caeec68a7bd0ef0",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 105,
+        "wires": []
+    },
+    {
+        "id": "bb3fd78f0d6e11fd",
+        "type": "catch",
+        "z": "7caeec68a7bd0ef0",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 180,
+        "y": 315,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "65740427f05fa3be",
+        "type": "change",
+        "z": "7caeec68a7bd0ef0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "date(msg.timestamp)",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "flag",
+                "pt": "msg",
+                "to": "woop",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 425,
+        "y": 180,
+        "wires": [
+            [
+                "423224e73431d344"
+            ]
+        ]
+    },
+    {
+        "id": "2bfb7ecfdb7d1845",
+        "type": "debug",
+        "z": "7caeec68a7bd0ef0",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 345,
+        "y": 105,
+        "wires": []
+    },
+    {
+        "id": "e36406f2.8ef798",
+        "type": "inject",
+        "z": "b4220f465b8c9d38",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payloadType": "str",
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "c3c50023.3bbed"
+            ]
+        ]
+    },
+    {
+        "id": "c3c50023.3bbed",
+        "type": "http request",
+        "z": "b4220f465b8c9d38",
+        "name": "Recent Quakes",
+        "method": "GET",
+        "paytoqs": "ignore",
+        "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.csv",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 280,
+        "y": 110,
+        "wires": [
+            [
+                "8afc6cac.e0812"
+            ]
+        ]
+    },
+    {
+        "id": "8afc6cac.e0812",
+        "type": "csv",
+        "z": "b4220f465b8c9d38",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": 0,
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 450,
+        "y": 90,
+        "wires": [
+            [
+                "44779781.4190f8",
+                "6f0eb546.9e208c"
+            ]
+        ]
+    },
+    {
+        "id": "44779781.4190f8",
+        "type": "debug",
+        "z": "b4220f465b8c9d38",
+        "name": "",
+        "active": false,
+        "complete": false,
+        "x": 650,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "6f0eb546.9e208c",
+        "type": "switch",
+        "z": "b4220f465b8c9d38",
+        "name": "",
+        "property": "payload.mag",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "7",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 1,
+        "x": 490,
+        "y": 180,
+        "wires": [
+            [
+                "d78d4aa8.8c8208"
+            ]
+        ]
+    },
+    {
+        "id": "d78d4aa8.8c8208",
+        "type": "change",
+        "z": "b4220f465b8c9d38",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "PANIC!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 240,
+        "wires": [
+            [
+                "72fddece.fac0d"
+            ]
+        ]
+    },
+    {
+        "id": "72fddece.fac0d",
+        "type": "debug",
+        "z": "b4220f465b8c9d38",
+        "name": "",
+        "active": false,
+        "complete": false,
+        "x": 730,
+        "y": 180,
+        "wires": []
+    }
+]
